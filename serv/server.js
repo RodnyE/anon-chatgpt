@@ -6,6 +6,8 @@ const app = express();
 // Global middlewares
 app.use(express.json());
 
+// Routers
+app.use(require("./routers/api-chat.js"))
 
 // Start the server and listen on the specified port
 app.listen(config.PORT, () => {
