@@ -1,5 +1,9 @@
 
-require("dotenv").config();
+// Get environment variables
+let dotenv = require("dotenv").config({path: ".env"});
+if (dotenv.error) {
+    throw new Error("Expected a `.env` file.");
+}
 
 module.exports = {
     PORT: process.env.PORT || 3000,
