@@ -25,8 +25,8 @@ export const askAI = (requestBody) => {
         requestBody, 
         requestOptions
     )
-    .then(response => {
-        let answer = response.data.answer;
+    .then(({data}) => {
+        let answer = data.data.answer;
         
         return Promise.resolve(answer);
     });
